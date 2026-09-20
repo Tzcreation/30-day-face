@@ -45,11 +45,14 @@
       <label class="field">Night reminder
         <input type="time" id="nightTime">
       </label>
+      <button class="secondary-btn" id="themeBtn">🌙 Dark mode: OFF</button>
       <button class="primary-btn" id="notifyBtn">🔔 Enable notifications</button>
-      <button class="secondary-btn" id="resetBtn">Reset all progress</button>
+      <button class="primary-btn" id="installBtn">📲 Install app</button>
+      <button class="secondary-btn" id="resetBtn">Reset progress & photos</button>
       <p class="note">Notifications depend on Android/browser permissions. The routine itself is saved on this phone.</p>
     </div>
   </div>
+  <input id="photoInput" type="file" accept="image/*" capture="environment" hidden>
 
   <script src="app.js"></script>
 </body>

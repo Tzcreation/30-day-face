@@ -78,3 +78,22 @@ h3{font-size:16px;margin:0}
 .note{font-size:10px;line-height:1.5;color:var(--muted);margin-top:12px}
 .empty{padding:25px;text-align:center;color:var(--muted)}
 @media(min-width:700px){body{padding:0 20px}.bottom-nav{bottom:12px;border:1px solid var(--line);border-radius:22px}.topbar{border-radius:0 0 18px 18px}}
+
+
+/* Version 2 additions */
+:root[data-theme="dark"]{
+  --bg:#171815;--card:#22241f;--ink:#f1eee7;--muted:#aaa79f;--line:#383a34;--soft:#30372c;--shadow:0 10px 30px rgba(0,0,0,.24);
+}
+:root[data-theme="dark"] .topbar{background:rgba(23,24,21,.94)}
+:root[data-theme="dark"] .bottom-nav{background:rgba(34,36,31,.95)}
+:root[data-theme="dark"] .hero{background:linear-gradient(135deg,#283025,#28251f);border-color:#3a4235}
+:root[data-theme="dark"] .field input{background:#171815;color:var(--ink);border-color:var(--line)}
+:root[data-theme="dark"] .secondary-btn{background:#30322d;color:var(--ink)}
+:root[data-theme="dark"] .stat{background:#2b2d28}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 14px}
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.photo-item{text-align:center;min-width:0}
+.photo-box{aspect-ratio:1/1;border:1px dashed #cfc7bc;border-radius:16px;display:grid;place-items:center;overflow:hidden;color:var(--muted);font-size:11px;background:var(--bg)}
+.photo-box img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-btn{font-size:11px;padding:9px 6px;margin-top:7px}
+.text-btn{border:0;background:transparent;color:var(--danger);font-size:10px;padding:5px}
