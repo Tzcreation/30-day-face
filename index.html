@@ -7,8 +7,9 @@
 <meta name="description" content="30 ദിവസത്തെ personal skincare routine planner">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icons/icon-192.png">
-<link rel="stylesheet" href="home-v4.css">
-<title>30 Day Skin Routine V4</title>
+<script>if(!localStorage.getItem("skinRoutineV41Fresh")){localStorage.setItem("skinRoutineV41Fresh","1");Promise.all([navigator.serviceWorker?.getRegistrations?.().then(rs=>Promise.all(rs.map(r=>r.unregister()))),caches?.keys?.().then(ks=>Promise.all(ks.map(k=>caches.delete(k))))]).finally(()=>location.replace(location.pathname+"?v=4.1"));}</script>
+<link rel="stylesheet" href="home-v4.css?v=4.1">
+<title>30 Day Skin Routine V4.1</title>
 </head>
 <body>
 <div id="app">
@@ -38,6 +39,6 @@
   </div>
 </div>
 <input id="photoInput" type="file" accept="image/*" capture="environment" hidden>
-<script src="app-v4.js"></script>
+<script src="app-v4.js?v=4.1"></script>
 </body>
 </html>

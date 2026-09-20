@@ -62,7 +62,7 @@ function todayScreen(){
  const greeting=new Date().getHours()<12?'Good morning':new Date().getHours()<18?'Good afternoon':'Good evening';
  const taskRow=(x)=>`<div class="micro-task"><button class="micro-check ${done.has(x[0])?'is-done':''}" onclick="toggleTask(${d},'${x[0]}')">${done.has(x[0])?'✓':''}</button><div class="micro-copy"><b>${esc(x[1])}</b><small>${esc(x[2]||'')}</small></div></div>`;
  return `<div class="clean-home">
-   <section class="home-intro"><div><div class="hello">${greeting} 👋</div><h2>${previewDay?'Day preview':'Today'}</h2><p>${planDate(d)}</p></div><div class="day-orb"><b>${d}</b><span>/ 30</span></div></section>
+   <section class="home-intro"><div><div class="hello">${greeting} 👋</div><div class="v41-pill">V4 • Compact</div><h2>${previewDay?'Day preview':'Today'}</h2><p>${planDate(d)}</p></div><div class="day-orb"><b>${d}</b><span>/ 30</span></div></section>
    <section class="focus-line"><div class="focus-copy"><b>${p}% complete</b><span>${completed} of ${total} tasks</span></div><div class="thin-progress"><i style="width:${p}%"></i></div></section>
    <section class="routine-grid">
     <div class="routine-column"><header><span>☀️</span><div><b>Morning</b><small>${morningDone}/${r.morning.length} done</small></div></header>${r.morning.map(taskRow).join('')}</div>
