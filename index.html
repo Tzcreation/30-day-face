@@ -1,59 +1,43 @@
 <!doctype html>
 <html lang="ml">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#F7F4EF">
-  <meta name="description" content="30 ദിവസത്തെ personal skincare routine planner">
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="icons/icon-192.png">
-  <link rel="stylesheet" href="style.css">
-  <title>30 Day Skin Routine</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F7F4EF">
+<meta name="description" content="30 ദിവസത്തെ personal skincare routine planner">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css">
+<title>30 Day Skin Routine V3</title>
 </head>
 <body>
-  <div id="app">
-    <header class="topbar">
-      <div>
-        <div class="eyebrow">PERSONAL SKINCARE PLANNER</div>
-        <h1>30 Day Skin Routine</h1>
-      </div>
-      <button class="icon-btn" id="settingsBtn" aria-label="Settings">⚙️</button>
-    </header>
-
-    <main id="screen" class="screen"></main>
-
-    <nav class="bottom-nav" aria-label="Main navigation">
-      <button data-tab="today" class="nav-item active"><span>🏠</span><small>Today</small></button>
-      <button data-tab="days" class="nav-item"><span>📅</span><small>30 Days</small></button>
-      <button data-tab="products" class="nav-item"><span>🧴</span><small>Products</small></button>
-      <button data-tab="progress" class="nav-item"><span>📊</span><small>Progress</small></button>
-    </nav>
+<div id="app">
+<header class="topbar">
+  <div><div class="eyebrow">PERSONAL SKINCARE PLANNER</div><h1>30 Day Skin Routine</h1></div>
+  <button class="icon-btn" id="settingsBtn" aria-label="Settings">⚙️</button>
+</header>
+<main id="screen" class="screen"></main>
+<nav class="bottom-nav" aria-label="Main navigation">
+  <button data-tab="today" class="nav-item active"><span>🏠</span><small>Today</small></button>
+  <button data-tab="days" class="nav-item"><span>📅</span><small>30 Days</small></button>
+  <button data-tab="products" class="nav-item"><span>🧴</span><small>Products</small></button>
+  <button data-tab="progress" class="nav-item"><span>📊</span><small>Progress</small></button>
+</nav>
+</div>
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+  <div class="modal-card">
+    <div class="modal-head"><h2>Settings</h2><button class="icon-btn" id="closeModal">✕</button></div>
+    <label class="field">Plan start date<input type="date" id="startDate"></label>
+    <label class="field">Morning reminder<input type="time" id="morningTime"></label>
+    <label class="field">Night reminder<input type="time" id="nightTime"></label>
+    <button class="secondary-btn" id="themeBtn">🌙 Dark mode: OFF</button>
+    <button class="primary-btn" id="notifyBtn">🔔 Enable notifications</button>
+    <button class="primary-btn" id="installBtn">📲 Install app</button>
+    <button class="secondary-btn danger-btn" id="resetBtn">Reset progress & photos</button>
+    <p class="note">Routine progress ഈ phone/browser-ൽ save ചെയ്യും. Progress photos secure ആയി browser IndexedDB-യിൽ local ആയി save ചെയ്യും.</p>
   </div>
-
-  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
-    <div class="modal-card">
-      <div class="modal-head">
-        <h2>Settings</h2>
-        <button class="icon-btn" id="closeModal">✕</button>
-      </div>
-      <label class="field">Plan start date
-        <input type="date" id="startDate">
-      </label>
-      <label class="field">Morning reminder
-        <input type="time" id="morningTime">
-      </label>
-      <label class="field">Night reminder
-        <input type="time" id="nightTime">
-      </label>
-      <button class="secondary-btn" id="themeBtn">🌙 Dark mode: OFF</button>
-      <button class="primary-btn" id="notifyBtn">🔔 Enable notifications</button>
-      <button class="primary-btn" id="installBtn">📲 Install app</button>
-      <button class="secondary-btn" id="resetBtn">Reset progress & photos</button>
-      <p class="note">Notifications depend on Android/browser permissions. The routine itself is saved on this phone.</p>
-    </div>
-  </div>
-  <input id="photoInput" type="file" accept="image/*" capture="environment" hidden>
-
-  <script src="app.js"></script>
+</div>
+<input id="photoInput" type="file" accept="image/*" capture="environment" hidden>
+<script src="app.js"></script>
 </body>
 </html>

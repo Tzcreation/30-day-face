@@ -1,20 +1,17 @@
-# 30 Day Skin Routine — Version 2 (fixed)
+# 30-Day Skin Routine PWA — V3
 
-Mobile-first PWA for the 30-day skincare routine. This build starts from the tested Version 1 and adds V2 features without changing the Version 1 storage key, so existing GitHub/phone progress can be preserved.
+Built from the working V1 logic and the tested V2 interface.
 
-## V2 features
-- Today dashboard with completion, done-days and streak
-- 30-day calendar with day preview
-- Morning/night checklists
-- 6-product library
-- Day 1 / 15 / 30 progress photos stored locally (compressed)
-- Dark mode
-- Install-app button when supported
-- Settings for start date and reminder times
-- Notification permission request
-- PWA manifest + service worker + offline assets
+## V3 fixes
+- Morning and night task IDs are now completely separate. Ticking a morning task cannot tick a night task or another day.
+- Existing V1/V2 progress is migrated where the old IDs are unambiguous.
+- Day 1 / Day 15 / Day 30 photos use IndexedDB instead of localStorage, with image compression, preview, replace and delete.
+- Product cards use current real product-packaging image URLs, with the bundled V1-style image as a fallback if an online image is unavailable.
+- 30-day calendar, persistence, dark mode, settings and PWA install/offline shell are retained.
 
-## Important
-Replace the old V1 files in the GitHub repository with all files from this ZIP. Do not upload only `index.html` and `app.js`; the images, icons, manifest, CSS and service worker are also required.
+## GitHub Pages
+Replace the files in your existing repository with the contents of this folder. Keep the repository root structure unchanged. Your current site is:
+https://tzcreation.github.io/30-day-face/
 
-The app keeps the V1 `skinRoutineState` localStorage key so existing V1 completion data is readable.
+## Product image sources
+The six product image URLs are included directly in `app.js`. They are loaded from public web image hosts and may change over time; fallback local images are bundled so the product cards do not become blank if a remote image is unavailable.
