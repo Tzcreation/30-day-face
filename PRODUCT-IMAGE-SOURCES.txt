@@ -1,0 +1,8 @@
+V3 product image sources checked during build:
+
+CeraVe Foaming Facial Cleanser: https://business.walmart.com/ip/CeraVe-Foaming-Facial-Cleanser-Daily-Face-Wash-for-Normal-to-Oily-Skin-12-fl-oz/836389588
+Garnier Bright Complete Vitamin C Serum: https://www.garnier.in/about-our-brands/Skin-naturals/bright-complete/vitamin-c-face-serum
+The Ordinary Niacinamide 10% + Zinc 1%: https://theordinary.com/en-us/niacinamide-10-zinc-1-serum-100436.html
+The Ordinary Azelaic Acid Suspension 10%: https://theordinary.com/en-us/azelaic-acid-suspension-10-exfoliator-100407.html
+CeraVe Daily Moisturizing Lotion: https://www.cerave.com/skincare/moisturizers/daily-moisturizing-lotion
+La Roche-Posay Anthelios UVMune 400 Invisible Fluid SPF50+: https://www.laroche-posay-me.com/en/anthelios/anthelios-uvmune/anthelios-uvmune-400-invisible-fluid-spf50-plus-non-perfumed
