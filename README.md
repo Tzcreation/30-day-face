@@ -1,11 +1,10 @@
-# 30 Day Skin Routine PWA V6.7.2
+# 30 Day Skin Routine PWA V6.7.9
 
-Updates:
-- Morning/Night product images now open in a full-screen viewer on tap.
-- Home left/right swipe uses a slower 0.5-second slide animation.
-- Removed the Today % / streak strip from Home.
-- Day circle is larger and now shows Day X/30 + completion percentage with a liquid/wave fill.
-- Existing Progress photo zoom and 30-day liquid circles retained.
-- Cache version bumped to V15.
+Fixes:
+- Progress photo thumbnails now use a dedicated capture-phase tap handler.
+- Saved photos open the full-screen viewer reliably on mobile.
+- Viewer stage sizing, image fit, zoom buttons, and touch gestures are explicitly styled.
+- IndexedDB photo storage and existing saved photos are preserved.
+- Cache version bumped to V21.
 
-Upload all files in this folder to the GitHub Pages `main` branch and replace the previous files.
+Upload all files in this folder to the GitHub Pages `main` branch, replacing the previous files. Do not delete browser site data; photos are stored locally in IndexedDB.

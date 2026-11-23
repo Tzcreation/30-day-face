@@ -154,6 +154,16 @@ async function openPhotoViewer(d){
 }
 
 const screen=document.getElementById('screen');
+// Progress-photo cards get a dedicated capture-phase tap handler so image taps
+// always reach the viewer on mobile browsers, even after the thumbnail is hydrated.
+screen.addEventListener('click',e=>{
+  const box=e.target.closest('.photo-box[data-photo-view]');
+  if(!box)return;
+  e.preventDefault();e.stopImmediatePropagation();
+  const d=Number(box.dataset.photoView);
+  if(!Number.isFinite(d)||d<1)return;
+  if(state.photoDays[d])openPhotoViewer(d);else choosePhoto(d);
+},true);
 // Product image: single tap = tick, press-and-hold = popup. Double-tap is intentionally disabled.
 let imageHoldTimer=null,imageHoldFired=false,imageHoldTarget=null;
 function clearImageGesture(){clearTimeout(imageHoldTimer);imageHoldTimer=null;imageHoldTarget=null}
